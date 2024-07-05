@@ -15,13 +15,12 @@ This repository is organized by programming language or technology, making it ea
 
 ## How to Explore
 
-1. **Browse by Language:** Navigate to the folder corresponding to the language or technology you're interested in.
-2. **Check the README:** Each project folder typically includes a README file with:
+1. **Check the README:** Each project folder typically includes a README file with:
    - A description of the project's purpose and functionality.
    - Instructions on how to run or view the project locally.
    - Screenshots or GIFs (if applicable).
    - Any other relevant information or notes.
-3. **Try It Out:** Follow the instructions in the README to run the project on your own machine. Feel free to experiment and modify the code!
+2. **Try It Out:** Follow the instructions in the README to run the project on your own machine. Feel free to experiment and modify the code!
 
 ## Goals
 
