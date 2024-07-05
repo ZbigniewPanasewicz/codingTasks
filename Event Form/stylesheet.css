@@ -1,0 +1,173 @@
+body {
+    background: linear-gradient(45deg, #ffffff, #c90101);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    background-image: url('ymaa-logo.png');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 981px; /* Set the desired width */
+    height: 981px; /* Set the desired height */
+    z-index: -1;
+  }  
+  
+  .container {
+    background: rgba(248, 152, 152, 0.7);
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid rgb(151, 91, 91);
+    max-width: 900px; /* Set your desired width */
+    margin: 0 auto;
+    display: flex;
+  flex-direction: column;
+  align-items: center; 
+  }
+  
+  .container .welcome, h2 {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.4rem;
+    margin: 0 0 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container p.text-description, p {
+    font-weight: bold;
+    color: #f7dede;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .container input[type="email"],
+  .container input[type="password"] {
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container input[type="button"] {
+    width: 150px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .container input[type="button"]:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .container textarea, .container input  {
+    background: transparent;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 1em;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .container input, .container fieldset  {
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid rgb(151, 91, 91);
+    padding: 1em;
+    margin-bottom: 1em;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .container textarea::placeholder, .container input::placeholder {
+    color: #fff; /* White placeholder text */
+  }
+  
+  .container textarea:focus, .container input:focus {
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid #fc1f1f; 
+    box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .radio-container {
+    display: flex;
+    flex-direction: column; /* Display options vertically */
+    gap: 10px; /* Add vertical space between options */
+    align-items: flex-start; /* Align options to the left */
+}
+
+.radio-container input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(151, 91, 91);
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.radio-container label {
+    font-weight: bold;
+    color: #f7dede;
+    font-size: 1.1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align label and radio button vertically */
+}
+
+.radio-container input[type="radio"]:checked {
+    background-color: #ffffff; 
+}
+
+/* Style for the submit button */
+.container input[type="submit"] {
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid rgb(151, 91, 91);
+  padding: 1em;
+  color: #f00202;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  width: 70%;
+  margin: 0 auto;
+  cursor: pointer; /* Add cursor pointer on hover */
+}
+
+/* Style for the submit button placeholder text */
+.container input[type="submit"]::placeholder {
+  color: #fff; /* White placeholder text */
+}
+
+/* Style for the submit button when focused */
+.container input[type="submit"]:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fc1f1f;
+  color: #970303;
+  box-shadow: 0 4px 10px 2px rgba(0, 0, 0, 0.2);
+  outline: none; /* Remove default focus outline */
+}
