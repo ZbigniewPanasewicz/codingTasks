@@ -1,0 +1,412 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom, #96e7fc, #5580f5);
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+    min-height: 100vh;
+    min-width: 100%;
+  
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #5580f5, #96e7fc);
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+} 
+
+/* Logo*/
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 130px;
+  margin-right: 20px; 
+  animation: rotateLogo 2s linear infinite; 
+}
+
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg); /* Starting position */
+  }
+  50% {
+    transform: rotate(10deg); /* Rotate to the right */
+  }
+  100% {
+    transform: rotate(-10deg); /* Rotate to the left */
+  }
+}
+
+.main-content {
+  font-family: Arial, sans-serif; /* Move font-family here */
+  background: linear-gradient(to right, #1855fc, #5902cc);
+  padding: 40px;
+  margin: auto;
+}
+
+.content-wrapper {
+  flex: 1; 
+}
+
+/* Title (h1) */
+h1 {
+  font-size: 7lvw;
+  font-weight: bold;
+  color: #0420bd;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation (h2, h3 and nav links) */
+h2 {
+  font-size: 2.2lvw;
+  color: #7085fa;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.7lvw;
+  color: #7085fa;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;           /* Add some padding */
+  border-radius: 5px
+}
+
+nav a {
+  font-size: 1.2lvw;
+  text-decoration: none;
+  font-weight: bold;
+  color: #036ecc;
+  margin: 0 10px;
+  transition: color 0.3s;
+  padding: 5px 10px;
+  margin: 0 15px;
+  border-radius: 3px;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #012852;
+  transform: scale(1.05); 
+}
+
+/* Login form */
+form {
+  margin-top: 20px;
+}
+
+input {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #0074d9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Card styles */
+.Card {
+  border: 1px solid #ccc; /* Adds a light grey border */
+  border-radius: 8px; /* Rounds the corners of the card */
+  overflow: hidden; /* Ensures the content fits within the rounded corners */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.Card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds shadow on hover for depth */
+}
+
+/* Card image styles */
+.Card .Card.Img {
+  height: 180px; 
+  object-fit: cover; 
+}
+
+/* Card body styles */
+.Card .Card.Body {
+  padding: 15px; 
+}
+
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Space evenly around items */
+  gap: 10px; 
+}
+
+.product-card {
+  border: 1px solid #ccc; /* Adds a border */
+  border-radius: 8px; 
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb); 
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+/* Card image styles */
+.product-card .card-img-top {
+  height: 180px; 
+  object-fit: cover; 
+}
+
+.price {
+  font-size: 1lvw;
+  font-weight: bold;
+  color: #031891;
+}
+/* Card body styles */
+.product-card .card-body {
+  padding: 15px;
+}
+
+/* Dropdown button */
+.dropdown-toggle.btn-success {
+  background-color: #007bff; 
+  border-color: #007bff;     
+  color: white;             
+}
+
+.dropdown-toggle.btn-success:hover,
+.dropdown-toggle.btn-success:focus {
+  background-color: #0069d9; 
+  border-color: #0062cc;  
+}
+
+.dropdown-toggle.btn-pink { /* Additional Styles for pink */
+  background-color: pink;
+  border-color: pink;
+}
+
+.dropdown-toggle.btn-red { /* Additional Styles for red */
+  background-color: red;
+  border-color: red;
+}
+
+.dropdown-toggle.btn-yellow { /* Additional Styles for yellow */
+  background-color: yellow;
+  border-color: yellow;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  background-color: #f8f9fa; 
+}
+
+.dropdown-item {
+  color: #007bff;          
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #e2e6ea; 
+}
+
+
+/* About component */
+.about-container {
+  display: flex;
+  flex-direction: column; /* Main container: vertical layout */
+}
+
+.content-row {
+  display: flex;           
+  flex-direction: row;    
+  align-items: flex-start; 
+  width: 80%;
+  gap: 80px;              
+}
+
+.figure-container {
+  flex: 0 0 auto;        /* Figure should not grow or shrink */
+  margin-top: 20px;       /* Adjust top margin if needed */
+}
+
+.text-container {
+  flex: 1;  
+  color: #547ff7;   
+  text-align: justify;   
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);         
+  background: linear-gradient(to bottom right, #1a1ef8, #2c1d61);
+  padding: 20px;       
+  border-radius: 8px;
+}
+
+.text-container h3 {
+  color: #6c92fa;       
+  text-align: left;  
+}
+
+.text-container ul li { 
+  padding-left: 20px;  
+}
+
+.about-image {
+  display: flex; 
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 60%;            
+  margin-left: auto;     
+  margin-right: auto;
+}
+
+.about-image img {
+  width: 450px;
+  height: 300px;
+  border: 5px solid #050399;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.about-image img:hover {
+  transform: scale(1.05); /* Enlarge on hover */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Darker, larger shadow on hover */
+  z-index: 1; /* Ensure the image is on top */
+}
+
+/* Responsive Design (optional) */
+@media (max-width: 768px) {
+  /* ... (your existing responsive styles) ... */
+  .about-image img {
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Landing component */
+.landing-container {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  width: 80%;
+  padding: 20px;
+  flex-direction: row; 
+  flex-wrap: wrap;  
+  margin: 0 auto;        
+  max-width: 70%; 
+}
+
+.featured-sock {
+  text-align: center;
+  max-width: 400px; 
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  overflow: hidden; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.featured-sock:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.featured-sock .card-img-top {
+  height: 180px; /* Fixed height for images */
+  object-fit: cover; 
+}
+
+.featured-sock .card-body {
+  padding: 15px;
+}
+
+.news-section {
+  flex: 1;
+  margin-left: 40px;  
+  width: 90%; 
+}
+
+.news-section article {
+  border: 2px solid #7085fa;    
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background: linear-gradient(to bottom right, #1a1ef8, #2c1d61);
+}
+
+.right-column {
+  display: flex;          
+  flex-direction: column; 
+  flex: 1;   
+  color: #547ff7;    
+  text-align: left;  
+  text-align: justify;  
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);      
+  background: linear-gradient(to bottom right, #1a1ef8, #2c1d61);
+  padding: 20px;  
+  padding-left: 50px;  
+  border-radius: 8px;
+  margin-left: 40px;;
+}
+
+.news-section h2 {
+  color: #0420bd; 
+  margin-bottom: 15px;
+}
+
+.news-section article {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* TotalPrice component */
+.total-price {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #194cf1;    
+  padding: 4px 6px 0px 5px;   
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Footer component */
+.footer {
+  color: #0074d9;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #000257, #2803af);
+}
