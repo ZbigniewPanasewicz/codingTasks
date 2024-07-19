@@ -1,0 +1,312 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+   
+} 
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    text-align: center;
+}
+
+.periodic-table {
+  position: absolute;
+  z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(19, 5vw);
+    grid-template-rows: repeat(10, 5.7vw);
+    grid-gap: 2px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+
+.cell {
+    float: left;
+    position: relative;
+    padding-top: 6px;
+    padding-bottom: 0.1vw;
+    justify-content: center;
+    border: 1px solid #000;
+  }
+  .cell-empty {
+    float: left;
+    position: relative;
+    margin: 5px;
+    justify-content: center;
+    border: 1px solid #fff;
+  }
+  .row-number {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content:right;
+  height: 5vw;
+    text-align: center;
+    color: #3d3d3d;
+    font-size: 1vw;
+    border: 0;
+  }
+  .column-number {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: end;
+  height: 5vw;
+    color: #3d3d3d;
+    font-size: 1vw;
+    border: 0;
+  }
+
+.element {
+    position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 1px;
+  right: 1px;
+  box-sizing: border-box;
+  text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.atomic-number {
+  font-size: 1vw;
+  margin-top: 3px;
+  font-weight: bold;
+  float: left;
+}
+
+.symbol {
+  font-size: 1.3vw;
+  margin-top: 28px;
+  font-weight: bold;
+}
+
+.name {
+  font-size: 0.70vw;
+  font-weight: bold;
+}
+
+.atomic-weight {
+  float: right;
+  font-size: 0.70vw;
+}
+
+.group {
+   font-size: 0.55vw;
+    font-weight: normal;
+    padding-top: 3px;
+}
+
+
+
+                                      /* Cell colours */
+.noblegas { 
+  background-color: #ffe8c5; 
+} 
+.nonmetal { 
+  background-color: #ffffc5; 
+} 
+.alkali_metal { 
+  background-color: #ffc9c9; 
+} 
+.alkalineearthmetal { 
+  background-color: #d7d7ff; 
+} 
+.transitionmetal { 
+  background-color: #c4e2ff; 
+} 
+.metalloid { 
+  background-color: #e5f0c5; 
+} 
+.post-transitionmetal { 
+  background-color: #c5ffc5; 
+} 
+.lanthanide { 
+  background-color: #aeffff; 
+} 
+.actinide { 
+  background-color: #c2ffeb; 
+} 
+
+                                     /*  Use Focus on Cell */
+.noblegas:hover,
+.noblegas:focus
+ { 
+  background-color: #e7cea7;
+} 
+.nonmetal:hover,
+.nonmetal:focus { 
+  background-color: #f0f0a8; 
+} 
+.alkali_metal:hover,
+.alkali_metal:focus { 
+  background-color: #e7b5b5; 
+} 
+.alkalineearthmetal:hover,
+.alkalineearthmetal:focus { 
+  background-color: #bfbfe9; 
+} 
+.transitionmetal:hover,
+.transitionmetal:focus { 
+  background-color: #accbe7; 
+} 
+.metalloid:hover,
+.metalloid:focus { 
+  background-color: #d0dbaf; 
+} 
+.post-transitionmetal:hover,
+.post-transitionmetal:focus { 
+  background-color: #b1ebb1; 
+} 
+.lanthanide:hover,
+.lanthanide:focus { 
+  background-color: #98e6e6; 
+} 
+.actinide:hover,
+.actinide:focus { 
+  background-color: #a9e2cf; 
+} 
+
+
+
+
+                                        /*  box with description of content   */
+.box {
+  position: absolute;
+  height: 9vw;
+  width: 7vw;
+  z-index: 2;
+  padding: 5px;
+  margin: 10px;
+  left: 35vw; 
+  top: 8vw;
+  border: 1px solid #414141;
+}
+.box-element {
+  position: absolute;
+top: 0;
+left: 0;
+bottom: 1px;
+right: 1px;
+box-sizing: border-box;
+text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffc5; 
+}
+.box-atomic-number {
+font-size: 1.3vw;
+margin-top: 5px;
+font-weight: bold;
+float: left;
+}
+.box-symbol {
+font-size: 2.6vw;
+margin-top: 2vw;
+font-weight: bold;
+}
+.box-name {
+font-size: 1.1vw;
+font-weight: bold;
+}
+.box-atomic-weight {
+float: right;
+font-size: 0.85vw;
+}
+.box-group {
+ font-size: 0.65vw;
+  font-weight: normal;
+  padding-top: 3px;
+}
+.atomic-number-desc {
+  position: absolute;
+  width: 7.5vw;
+  z-index: 3;
+  left: -7.4vw; 
+  top: 0.4vw;
+  color: #6e6d6d;
+}
+.atomic-weight-desc {
+  position: absolute;
+  width: 6.6vw;
+  z-index: 4;
+  left: 6.8vw; 
+  top: 0.1vw;
+  text-align: right;
+  color: #6e6d6d;
+}
+.symbol-desc {
+  position: absolute;
+  width: 4.8vw;
+  z-index: 5;
+  left: 6.5vw; 
+  top: 3.3vw;
+  text-align: right;
+  color: #6e6d6d;
+}
+.name-desc {
+  position: absolute;
+  width: 4vw;
+  z-index: 6;
+  left: -3.5vw; 
+  top: 4.5vw;
+  color: #6e6d6d;
+}
+.group-desc {
+  position: absolute;
+  width: 10.5vw;
+  z-index: 7;
+  left: 6.5vw; 
+  top: 6.1vw;
+  text-align: right;
+  color: #6e6d6d;
+}
+
+
+
+/* screen size matter ;)  */
+@media only screen and (max-width: 1100px) {
+    div.periodic-table {
+      margin-right: 1.8vw;
+    }
+
+  div.atomic-number {
+      font-size: 1.4vw;
+      margin-top: 1px;
+      
+    }
+   
+    div.symbol {
+      font-size: 1.6vw;
+      padding-bottom: 3px;
+      position: absolute;
+      bottom: 4px;
+      left:30%;
+    }
+
+    div.atomic-weight, .name, .group, .box {
+      display: none;
+    
+  }
+}
+  
+@media only screen and (max-width: 600px)  {
+  
+  div.symbol, .atomic-number, .cell, .cell-empty {
+    display: none;
+  }
+  div.periodic-table {
+    background:url("medium-image.png") no-repeat;
+}
+}
+
+
+/*  Sources https://codepen.io/kevinmarks/pen/qjqXxG 
+            https://www.w3schools.com/cssref/css3_pr_mediaquery.php
+            https://www.geeksforgeeks.org/periodic-table-design-using-html-and-css/
+  
+            */
