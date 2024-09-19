@@ -1,22 +1,28 @@
-Water Usage Calculator
-
-Overview
-The Water Usage Calculator is a simple JavaScript program that calculates the cost of water consumption based on predefined tariff rates. It takes the total water usage (in liters) as input and provides the corresponding cost in South African rand ®.
+Shoe Inventory Management System
+This JavaScript program manages a shoe inventory using constructor functions and various utility functions. It allows you to create shoe objects, search for shoes by product code, find the lowest and highest value per item, edit shoe properties, and order shoes by value.
 
 Features
-Calculates water cost according to the City of Cape Town’s water tariff structure.
-Handles both low and high water consumption scenarios.
-Provides clear output with the calculated cost.
+Shoe Objects:
+Define a constructor function (Shoes) to create shoe objects with properties (Name, ProductCode, Quantity, ValuePerItem).
+Create five sample shoe objects.
+Search by Product Code:
+Implement a function (findShoeByProductCode) to search for a shoe by its product code.
+Example: Search for a shoe with product code “nike.”
+Find Lowest and Highest Value:
+Functions (findLowestValue and findHighestValue) identify the shoe with the lowest and highest value per item, respectively.
+Display the results.
+Edit Shoe Properties:
+Modify shoe properties using the editShoe function.
+Example: Update properties of shoe1.
+Order Shoes by Value:
+Sort shoes in ascending order by value per item using the orderByValuePerItem function.
+Display the ordered list.
+Usage
+Clone this repository to your local machine.
+Open the shoeInventory.js file in your preferred code editor.
+Customize the shoe objects, search criteria, and other functions as needed.
+Run the script using Node.js:
+node shoeInventory.js
 
-The calculated cost will be displayed in the console.
-Tariff Structure
-First 6,000 liters: R15.73 per kiloliter.
-Above 6,000 liters but less than or equal to 10,500 liters: R22.38 per kiloliter.
-Example
-Suppose a household has used 8,000 liters of water:
-
-First 6,000 liters cost: 6,000 * 15.73 = R94,380.
-Remaining 2,000 liters cost: 2,000 * 22.38 = R44,760.
-Total cost: R139,140.
 License
-This project is licensed under the MIT License. Feel free to use, modify, and distribute it.
+This project is licensed under the MIT License. Feel free to use and modify it.
