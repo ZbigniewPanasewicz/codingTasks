@@ -1,0 +1,122 @@
+// Defined a constructor function to create shoe objects
+function Shoes(Name, ProductCode, Quantity, ValuePerItem) {
+    this.Name = Name;
+    this.ProductCode = ProductCode;
+    this.Quantity = Quantity;
+    this.ValuePerItem = ValuePerItem;
+}
+
+// Created 5 shoe objects using the Shoes constructor
+let shoe1 = new Shoes("Adidas", "adidas", 23, 75);
+let shoe2 = new Shoes("Nike", "nike", 22, 80);
+let shoe3 = new Shoes("Reebok", "reebok", 21, 60);
+let shoe4 = new Shoes("Converse", "converse", 10, 45);
+let shoe5 = new Shoes("Skechers", "skechers", 14, 45);
+
+// Create an array to store the shoe objects
+let shoes = [shoe1, shoe2, shoe3, shoe4, shoe5];
+
+
+// Define a function to find a shoe by product code
+function findShoeByProductCode(array, productCode) {
+    const foundShoe = array.find(shoe => shoe.ProductCode === productCode);
+    return foundShoe || null; // Return the found shoe or null if not found
+}
+
+
+
+// Search for a shoe with product code "nike"
+const searchProductCode = "nike";
+const foundShoe = findShoeByProductCode(shoes, searchProductCode);
+
+if (foundShoe) {
+    console.log(`Found shoe: ${foundShoe.Name} (${foundShoe.ProductCode})`);
+} else {
+    console.log(`No shoe found with product code "${searchProductCode}"`);
+}
+
+
+// Define a function to find the lowest value per item
+function findLowestValue(array) {
+    if (array.length === 0) {
+        console.error("Error: No shoes in the array to compare.");
+        return;
+    }
+    array.sort((firstShoe, secondShoe) =>
+        firstShoe.ValuePerItem - secondShoe.ValuePerItem
+    );
+    if (array[0]) {
+        console.log(`The shoe with the lowest value per item is ${array[0].Name} (${array[0].ProductCode}), priced at £${array[0].ValuePerItem}`);
+        console.table(shoes);
+    } else {
+        console.error("Error: Lowest value shoe not found.");
+    }
+}
+
+// Define a function to find the highest value per item
+function findHighestValue(array) {
+    if (array.length === 0) {
+        console.error("Error: No shoes in the array to compare.");
+        return;
+    }
+    array.sort((firstShoe, secondShoe) =>
+        secondShoe.ValuePerItem - firstShoe.ValuePerItem
+    );
+    if (array[0]) {
+        console.log(`The shoe with the highest value per item is ${array[0].Name} (${array[0].ProductCode}), priced at £${array[0].ValuePerItem}`);
+    } else {
+        console.error("Error: Highest value shoe not found.");
+    }
+}
+
+// Rest of the code remains unchanged...
+
+// Call the findLowestValue function
+findLowestValue(shoes);
+
+// Call the findHighestValue function
+findHighestValue(shoes);
+
+
+
+// Function to edit shoe properties
+function editShoe(shoe, newName, newProductCode, newQuantity, newValuePerItem) {
+    shoe.Name = newName;
+    shoe.ProductCode = newProductCode;
+    shoe.Quantity = newQuantity;
+    shoe.ValuePerItem = newValuePerItem;
+}
+
+// Edit the properties of shoe1
+editShoe(shoe1, "New Adidas", "new-adidas", 30, 90);
+
+// Display the updated shoe1 details
+console.log("");
+console.log("New properties for shoe1:");
+console.log("Name:", shoe1.Name);
+console.log("Product Code:", shoe1.ProductCode);
+console.log("Quantity:", shoe1.Quantity);
+console.log("Value per item:", shoe1.ValuePerItem);
+console.log("");
+
+
+// Function to order the shoe objects in ascending order by value per item
+function orderByValuePerItem(array) {
+    array.sort((a, b) => a.ValuePerItem - b.ValuePerItem);
+}
+
+// Call the function to order the shoes
+orderByValuePerItem(shoes);
+
+// Display the ordered list of shoes
+console.log("Shoes ordered by value per item (ascending):");
+console.table(shoes);
+
+
+
+
+// Call the findLowestValue function
+findLowestValue(shoes);
+
+// Call the findHighestValue function
+findHighestValue(shoes);
